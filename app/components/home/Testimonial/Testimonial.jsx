@@ -1,0 +1,84 @@
+import React from "react";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+
+const Testimonial = () => {
+  const reviews = [
+    {
+      id: 1,
+      name: "Rahim Uddin",
+      image: "https://randomuser.me/api/portraits/men/12.jpg",
+      comment: "The product quality is excellent and delivery was very fast!",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Sharmin Akter",
+      image: "https://randomuser.me/api/portraits/women/25.jpg",
+      comment: "Customer service is great, really appreciated.",
+      rating: 4.5,
+    },
+    {
+      id: 3,
+      name: "Abdul Karim",
+      image: "https://randomuser.me/api/portraits/men/33.jpg",
+      comment: "Products arrived on time and exactly as described.",
+      rating: 4,
+    },
+    {
+      id: 4,
+      name: "Nusrat Jahan",
+      image: "https://randomuser.me/api/portraits/women/45.jpg",
+      comment: "The shopping experience was really amazing!",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Mehedi Hasan",
+      image: "https://randomuser.me/api/portraits/men/50.jpg",
+      comment: "I’m very satisfied with the quality and service. Will order again, Insha’Allah.",
+      rating: 4.5,
+    },
+  ];
+
+  const Stars = ({ rating }) => {
+    return (
+      <div className="flex justify-center text-yellow-400">
+        {Array.from({ length: 5 }, (_, i) => {
+          if (rating >= i + 1) return <FaStar key={i} />;
+          else if (rating >= i + 0.5) return <FaStarHalfAlt key={i} />;
+          else return <FaRegStar key={i} />;
+        })}
+      </div>
+    );
+  };
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          Customer Reviews
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          {reviews.map((review) => (
+            <div
+              key={review.id}
+              className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
+            >
+              <img
+                src={review.image}
+                alt={review.name}
+                className="w-20 h-20 rounded-full object-cover mb-4"
+              />
+              <h3 className="font-semibold text-lg mb-2 text-black">{review.name}</h3>
+              <p className="text-gray-600 mb-4 text-sm">{review.comment}</p>
+              <Stars rating={review.rating} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonial;
