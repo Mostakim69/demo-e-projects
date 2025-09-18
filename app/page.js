@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>
       <Navbar></Navbar>
-      <Catagories />
       <Banner />
+      <Catagories />
       <PopularProduct />
       <Testimonial />
       <Newsletter />
