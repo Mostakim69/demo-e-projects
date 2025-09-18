@@ -6,6 +6,7 @@ import Newsletter from "./components/newsletter/Newsletter";
 import PopularProduct from "./components/home/PopularProduct";
 import Banner from "./components/home/Banner";
 import Catagories from "./components/catagories/Catagories";
+import FeaturedProducts from "./components/featuredProducts/FeaturedProducts";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Banner />
       <Catagories />
+      <FeaturedProducts />
       <PopularProduct />
       <Testimonial />
       <Newsletter />
