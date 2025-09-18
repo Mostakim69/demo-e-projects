@@ -5,16 +5,18 @@ import Footer from "./components/shared/footer/Footer";
 import Newsletter from "./components/newsletter/Newsletter";
 import PopularProduct from "./components/home/PopularProduct";
 import Banner from "./components/home/Banner";
+import Catagories from "./components/catagories/Catagories";
 
 export default function Home() {
   return (
     <main>
-     <Navbar></Navbar>
-     <Newsletter></Newsletter>
-     <PopularProduct/>
-     <Banner></Banner>
-      <Testimonial/>
-     <Footer></Footer>
+      <Navbar></Navbar>
+      <Banner />
+      <Catagories />
+      <PopularProduct />
+      <Testimonial />
+      <Newsletter />
+      <Footer />
     </main>
   );
 }
