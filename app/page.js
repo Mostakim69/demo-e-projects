@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Navbar from "./components/shared/Navbar";
+import Footer from "./components/shared/footer/Footer";
 
 export default function Home() {
   return (
     <main>
-      hello world
+     <Navbar></Navbar>
+     <Footer></Footer>
     </main>
   );
 }
