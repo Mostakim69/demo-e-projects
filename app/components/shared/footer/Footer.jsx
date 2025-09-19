@@ -1,74 +1,100 @@
-// components/Footer.jsx
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
-import Link from "next/link";
-import logoImg from "@/public/logo.png"
 
+import Link from "next/link";
+import Image from "next/image";
+import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
-        {/* Logo & Name */}
+    <footer className="bg-white border-t border-gray-200 py-10">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        {/* Brand Section */}
         <div>
-          <div className="flex items-center gap-2 mb-3">
-            <Image src={logoImg} alt="Smart Shop Logo" width={40} height={40} />
-            <h1 className="text-xl font-bold text-white">Smart Shop</h1>
+          <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
+            <Image
+              src="/logo.png"
+              alt="Smart Shop Logo"
+              width={30}
+              height={30}
+            />
+            <span className="text-xl font-bold text-gray-800">Smart Shop</span>
           </div>
-          <p className="text-sm text-gray-400">
-           Smart Shop is your reliable e-commerce partner. We help online businesses manage inventory, track sales, and grow efficiently.
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Smart Shop helps businesses manage inventory, track sales, and grow
+            with confidence. Your trusted partner in e-commerce success.
           </p>
         </div>
 
-        {/* About Us */}
+        {/* Quick Links */}
         <div>
-          <h2 className="text-white font-semibold mb-3">About Us</h2>
-          <p className="text-sm text-gray-400">
-            At Smart Shop, our mission is to revolutionize e-commerce by using
-            artificial intelligence to provide accurate sales predictions and
-            efficient inventory management. We believe in empowering businesses
-            to grow smarter and faster.
-          </p>
+          <h4 className="font-semibold text-gray-800 mb-4">Quick Links</h4>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/best-sellers">Best Sellers</Link></li>
+            <li><Link href="/offers">Offers & Deals</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/faqs">FAQs</Link></li>
+          </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Need Help */}
         <div>
-          <h2 className="text-white font-semibold mb-3">Contact Info</h2>
-          <p className="text-sm">Email: support@smartshop.com</p>
-          <p className="text-sm">Phone: +880 1234-567890</p>
-          <p className="text-sm">Address: Dhaka, Bangladesh</p>
+          <h4 className="font-semibold text-gray-800 mb-4">Need Help?</h4>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li><Link href="/delivery">Delivery Information</Link></li>
+            <li><Link href="/returns">Return & Refund Policy</Link></li>
+            <li><Link href="/payment">Payment Methods</Link></li>
+            <li><Link href="/track-order">Track your Order</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+          </ul>
         </div>
 
-        {/* Social Media + Policies */}
+        {/* Follow Us with Icons */}
         <div>
-          <h2 className="text-white font-semibold mb-3">Connect With Us</h2>
-          <div className="flex gap-4 mb-4">
-            <Link href="https://github.com" target="_blank">
-              <FaGithub className="w-6 h-6 hover:text-white" />
-            </Link>
-            <Link href="https://linkedin.com" target="_blank">
-              <FaLinkedin className="w-6 h-6 hover:text-white" />
-            </Link>
-            <Link href="https://instagram.com" target="_blank">
-              <FaInstagram className="w-6 h-6 hover:text-white" />
-            </Link>
-          </div>
-          <div className="text-sm space-y-1">
-            <Link href="/terms" className="hover:underline">
-              Terms & Conditions
-            </Link>
-            <br />
-            <Link href="/privacy" className="hover:underline">
-              Privacy Policy
-            </Link>
+          <h4 className="font-semibold text-gray-800 mb-4">Follow Us</h4>
+          <div className="flex justify-center md:justify-start space-x-3">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="p-2 rounded-full bg-gray-100 hover:bg-pink-100 text-gray-600 hover:text-pink-500 transition"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-400 transition"
+            >
+              <Twitter size={18} />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 transition"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="p-2 rounded-full bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-500 transition"
+            >
+              <Youtube size={18} />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Bottom Copyright */}
-      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Smart Shop. All rights reserved. | Powered
-        by AI Technology
+      <div className="border-t border-gray-200 mt-8 pt-6 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Smart Shop. All Rights Reserved.
       </div>
     </footer>
   );
