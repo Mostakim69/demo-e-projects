@@ -49,7 +49,7 @@ export default function FeaturedProducts() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Featured Products
                 </h2>
-                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
+                <p className="text-base md:text-lg max-w-md mx-auto">
                     Check & Get Your Desired Product! 
                 </p>
             </div>
@@ -65,7 +65,7 @@ export default function FeaturedProducts() {
                             <div className="text-red-600 font-bold text-sm mb-2">
                                 {product.price} <span className="text-gray-500 line-through text-xs">{product.origPrice}</span>
                             </div>
-                            <button className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">
+                            <button className="w-full cursor-pointer bg-yellow-400 py-2 rounded hover:bg-yellow-300">
                                 Add to Cart
                             </button>
                         </div>
@@ -84,7 +84,7 @@ export default function FeaturedProducts() {
                             <div className="text-red-600 font-bold text-sm mb-2">
                                 {product.price} <span className="text-gray-500 line-through text-xs">{product.origPrice}</span>
                             </div>
-                            <button className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 cursor-pointer">
+                            <button className="w-full bg-yellow-400 text-white py-2 rounded hover:bg-yellow-300 cursor-pointer">
                                 Add to Cart
                             </button>
                         </div>
