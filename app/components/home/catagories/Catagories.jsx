@@ -75,7 +75,7 @@ export default function Categories() {
           Featured Categories
         </motion.h2>
         <motion.p
-          className="text-lg text-gray-600 max-w-md mx-auto"
+          className="text-lg mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
